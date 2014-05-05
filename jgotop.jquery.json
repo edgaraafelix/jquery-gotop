@@ -1,0 +1,32 @@
+{
+    "name": "jGoTop",
+    "title": "jGoTop",
+    "description": "The jQuery plugin that scrolls you back to the top of the page...",
+    "keywords": [
+        "jgotop",
+        "scroll",
+        "animation"
+    ],
+    "version": "0.0.1",
+    "author": {
+        "name": "Edgar Felix",
+        "url": "https://github.com/edgaraafelix"
+    },
+    "maintainers": [{
+        "name": "Edgar Felix",
+        "email": "eaafelix@gmail.com",
+        "url": "https://github.com/edgaraafelix"
+    }],
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/edgaraafelix/jquery-gotop/blob/master/LICENSE"
+    }],
+    "demo": "http://edgaraafelix.github.io/jquery-gotop/",
+    "bugs": "https://github.com/edgaraafelix/jquery-gotop/issues",
+    "homepage": "https://github.com/edgaraafelix/jquery-gotop/",
+    "docs": "http://edgaraafelix.github.io/jquery-gotop/",
+    "download": "https://github.com/edgaraafelix/jquery-gotop/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}

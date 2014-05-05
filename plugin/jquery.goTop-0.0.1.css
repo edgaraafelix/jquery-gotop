@@ -1,0 +1,76 @@
+/*! GoTop v0.0.1 (.)(.) by @edgaraafelix | (c) 2011, 2014 Onwi. | https://github.com/edgaraafelix/jquery-gotop | Licensed under MIT (https://github.com/edgaraafelix/jquery-gotop/blob/master/LICENSE) */
+
+.go-top {
+
+  z-index: 9999;
+
+  visibility: hidden;
+
+  padding: 20px 17px;
+  background-color: #333333;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      filter: alpha(opacity=0);
+  -webkit-opacity: 0;
+     -moz-opacity: 0;
+          opacity: 0;
+
+  cursor: pointer;
+
+}
+
+.go-top .up {
+
+  width: 0;
+  height: 0;
+
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid #ffffff;
+
+}
+
+.go-top.visible {
+
+  visibility: visible;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+     -moz-opacity: 0.5;
+          opacity: 0.5;
+
+}
+
+.go-top.hidden {
+  visibility: hidden;
+}
+
+.go-top.fade-in {
+
+  visibility: visible;
+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+      filter: alpha(opacity=50);
+  -webkit-opacity: 0.5;
+     -moz-opacity: 0.5;
+          opacity: 0.5;
+
+  -webkit-transition: visibility 0.5s linear, opacity 0.5s linear;
+     -moz-transition: visibility 0.5s linear, opacity 0.5s linear;
+          transition: visibility 0.5s linear, opacity 0.5s linear;
+
+}
+
+.go-top.fade-out {
+
+  visibility: hidden;
+
+  -webkit-transition: visibility 0.5s linear, opacity 0.5s linear;;
+     -moz-transition: visibility 0.5s linear, opacity 0.5s linear;;
+          transition: visibility 0.5s linear, opacity 0.5s linear;;
+
+}

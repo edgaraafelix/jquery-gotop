@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>jGoTop - Scroll Top jQuery Plugin</title>
+    <meta name="description" content="jGoTop, The jQuery plugin that scrolls you back to the top of the page...">
+    <meta name="keywords" content="jgotop, jQuery, plugin, CSS3, scroll">
+    <meta name="author" content="Edgar Felix">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link type="text/css" href="css/bootstrap.min.css" rel="stylesheet" />
+    <link type="text/css" href="css/style.css" rel="stylesheet" />
+    <link type="text/css" href="plugin/jquery.goTop-0.0.1.css" rel="stylesheet" />
+    <script src="js/vendor/modernizr-2.8.0.min.js"></script>
+  </head>
+  <body onload="prettyPrint();">
+    <div id="wrapper" class="clearfix">
+      <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+          <div class="navbar-header">
+            <button class="navbar-toggle" type="button" data-target=".navbar-collapse" data-toggle="collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <h1 class="navbar-brand">jGoTop</h1>
+          </div>
+          <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#getting-started" onclick="_gaq.push(['_trackEvent', 'Getting Started', 'header-menu-action', 'Getting Started']);">Getting Started</a></li>
+              <li><a href="#settings" onclick="_gaq.push(['_trackEvent', 'Settings', 'header-menu-action', 'Settings']);">Settings</a></li>
+              <li><a href="#examples" onclick="_gaq.push(['_trackEvent', 'Examples', 'header-menu-action', 'Examples']);">Examples</a></li>
+              <li><a href="#get-it-now" onclick="_gaq.push(['_trackEvent', 'Get It Now', 'header-menu-action', 'Get It Now']);">Get It Now</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div id="content">
+        <section class="docs-feature">
+          <div class="container">
+            <h1>jQuery GoTop</h1>
+            <p class="lead docs-lead">The jQuery plugin that scrolls you back to the top of the page...</p>
+            <p class="lead docs-lead">
+              <a class="btn docs-feature-btn btn-lg" href="https://github.com/edgaraafelix/jquery-gotop/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Download', 'docs-feature', 'Download v0.0.1-alpha']);">Download Now</a>
+            </p>
+            <p class="docs-version">v0.0.1-alpha</p>
+          </div>
+        </section>
+        <div class="container">
+          <section id="getting-started" class="docs-section">
+            <h1 class="page-header">Getting Started</h1>
+            <p class="lead">jGoTop has a easy way to quickly get started. Read through the examples to see what's the best approach for you. jGoTop requires jQuery 1.7+. See bellow to decide if this is your use case.</p>
+            <p>To work as expected you have to add <code>'jquery.goTop.css'</code> and <code>'jquery.goTop.js'</code>, as well the jQuery lib. We recommend that you include the CSS on your <code>&lt;head&gt;</code> tag and the JavaScript before your closing <code>&lt;body&gt;</code> tag, after jQuery. Initialize the plugin in a script file or an inline script tag and put it inside a DOM ready function after jQuery lib and jGoTop JavaScript: </p>
+            <div class="docs-code">
+<pre class="prettyprint lang-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Getting Started&lt;/title&gt;
+    &lt;link type="text/css" href="plugin/jquery.goTop-0.0.1.css" rel="stylesheet" /&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+
+    &lt;!-- Your Whatever Content Here --&gt;
+
+    &lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"&gt;&lt;/script&gt;
+    &lt;script src="plugin/jquery.goTop-0.0.1.min.js"&gt;&lt;/script&gt;
+    &lt;script&gt;
+    $(document).ready(function() {
+      $('body').goTop();
+    });
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+            </div>
+          </section>
+          <section id="settings" class="docs-section">
+            <h1 class="page-header">Settings</h1>
+            <p class="lead">With the following options you can control the plugin core functionality. Just read the description and get to know what these options exactly does.</p>
+            <div class="table-responsive">
+              <table class="table table-bordered table-striped">
+                <thead>
+                  <tr>
+                    <th style="width: 100px;">Name</th>
+                    <th style="width: 80px;">Type</th>
+                    <th style="width: 100px;">Default</th>
+                    <th style="width: 230px;">Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>animation</td>
+                    <td>boolean</td>
+                    <td>true</td>
+                    <td>Whether to apply a fade transition to the element, when <code>false</code> the element would simply appears or disappears.</td>
+                  </tr>
+                  <tr>
+                    <td>target</td>
+                    <td>string</td>
+                    <td>'html'</td>
+                    <td>Element in which we should scroll to, by default <code>'html'</code> is used.</td>
+                  </tr>
+                  <tr>
+                    <td>speed</td>
+                    <td>int</td>
+                    <td>600</td>
+                    <td>A number determining how long the animation will run until the scroll reach the top of the page, by default the speed used is <code>600</code>.</td>
+                  </tr>
+                  <tr>
+                    <td>distance</td>
+                    <td>int</td>
+                    <td>200</td>
+                    <td>The distance that the scroll must be from the top of the window in order to display the element that allows you to scroll to the top of the page, by default we use <code>200</code>.</td>
+                  </tr>
+                  <tr>
+                    <td>position</td>
+                    <td>string</td>
+                    <td>'BOTTOM_RIGHT'</td>
+                    <td>Where to position the element, the default position is <code>'BOTTOM_RIGHT'</code>. You can use one of the following: <code>TOP_LEFT, TOP_MIDDLE, TOP_RIGHT, BOTTOM_LEFT, BOTTOM_MIDDLE, BOTTOM_RIGHT</code>.</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+          <section id="examples" class="docs-section">
+            <h1 class="page-header">Examples</h1>
+            <p class="lead">This page is running the basic example, look at bottom right of your window... are you seeing anything? Click it and watch the plugin in action!</p>
+            <p>Besides these two examples, you can either test the other available options in order to get the desired behaviour even knowing this is a simple plugin.</p>
+            <h4>Basic Example</h4>
+            <div class="docs-code">
+              <pre class="prettyprint lang-js">$('body').goTop();</pre>
+            </div>
+            <h4>Positioning Example</h4>
+            <div class="docs-code">
+<pre class="prettyprint lang-js">
+$('body').goTop({
+  position: 'BOTTOM_RIGHT'
+});
+</pre>
+            </div>
+          </section>
+          <section id="get-it-now" class="docs-section">
+            <h1 class="page-header">Get It Now</h1>
+            <p class="lead">You can either download it directly from here or you can view the repo on GitHub.</p>
+            <p class="docs-section clearfix"></p>
+            <p class="lead docs-lead text-center">
+              <a class="btn docs-section-btn btn-lg" href="https://github.com/edgaraafelix/jquery-gotop/archive/master.zip" onclick="_gaq.push(['_trackEvent', 'Download', 'docs-section', 'Download v0.0.1-alpha']);">Download Now</a>
+              <a class="btn docs-section-btn btn-lg" href="https://github.com/edgaraafelix/jquery-gotop" target="_blank" onclick="_gaq.push(['_trackEvent', 'View On GitHub', 'docs-section', 'View on GitHub']);">View on GitHub</a>
+            </p>
+          </section>
+        </div>
+      </div> <!-- /#content -->
+      <footer class="footer">
+        <div class="container">
+          <ul>
+            <li><a href="#getting-started" onclick="_gaq.push(['_trackEvent', 'Getting Started', 'header-menu-action', 'Getting Started']);">Getting Started</a></li>
+            <li><a href="#settings" onclick="_gaq.push(['_trackEvent', 'Settings', 'header-menu-action', 'Settings']);">Settings</a></li>
+            <li><a href="#examples" onclick="_gaq.push(['_trackEvent', 'Examples', 'header-menu-action', 'Examples']);">Examples</a></li>
+            <li><a href="#get-it-now" onclick="_gaq.push(['_trackEvent', 'Get It Now', 'header-menu-action', 'Get It Now']);">Get It Now</a></li>
+          </ul>
+          <p>Developed by <a href="https://github.com/edgaraafelix/">@edgaraafelix</a></p>
+          <p>v0.0.1-alpha</p>
+        </div>
+      </footer>
+    </div> <!-- /#wrapper -->
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="js/vendor/bootstrap-3.1.1.min.js"></script>
+    <script src="js/vendor/prettify-3.3.4.min.js"></script>
+    <script src="plugin/jquery.goTop-0.0.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', 'UA-42334713-5']);
+      _gaq.push(['_trackPageview']);
+      (function() {
+      var ga = document.createElement('script'); ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+
+  </body>
+</html>

@@ -1,4 +1,4 @@
-/*! GoTop v0.0.1 (.)(.) by @edgaraafelix | (c) 2011, 2014 Onwi. | https://github.com/edgaraafelix/jquery-gotop | Licensed under MIT (https://github.com/edgaraafelix/jquery-gotop/blob/master/LICENSE) */
+/*! GoTop v0.0.3 by @edgaraafelix | (c) 2011, 2015 Onwi. | https://github.com/edgaraafelix/jquery-gotop | Licensed under MIT (https://github.com/edgaraafelix/jquery-gotop/blob/master/LICENSE) */
 
 .go-top {
 
@@ -45,9 +45,7 @@
 
 }
 
-.go-top.hidden {
-  visibility: hidden;
-}
+.go-top.hidden { visibility: hidden; }
 
 .go-top.fade-in {
 
@@ -73,4 +71,44 @@
      -moz-transition: visibility 0.5s linear, opacity 0.5s linear;;
           transition: visibility 0.5s linear, opacity 0.5s linear;;
 
+}
+
+.top-left,
+.top-middle,
+.top-right,
+.bottom-left,
+.bottom-middle,
+.bottom-right {
+  position: fixed;
+}
+
+
+.top-left {
+  top: 15px;
+  left: 15px;
+}
+
+.top-middle {
+  top: 15px;
+  left: 50%;
+}
+
+.top-right {
+  top: 15px;
+  right: 15px;
+}
+
+.bottom-left {
+  bottom: 15px;
+  left: 15px;
+}
+
+.bottom-middle {
+  bottom: 15px;
+  left: 50%;
+}
+
+.bottom-right {
+  bottom: 15px;
+  right: 15px;
 }
